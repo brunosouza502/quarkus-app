@@ -12,7 +12,7 @@
     <label>Barbeiro:</label><br>
     <select name="barbeiro">
         {#for b in barbers}
-            <option value="{b.getNome()}">{b.getNome()}</option>
+            <option name="barbeiro" value="{b.getNome()}" onclick="confirmBarber()">{b.getNome()}</option>
         {/for}
     </select><br><br>
 

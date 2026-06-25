@@ -13,3 +13,11 @@ function calcularTotal() {
     document.getElementById("totalInput").innerText = total.toFixed(2);//Total
     console.log(total.toFixed(2));
 }
+
+function confirmBarber()
+{
+    const barber = document.querySelector('option[name="barbeiro"]:clicked');
+
+    document.getElementById("total").innerText = barber;
+    console.log(barber);
+}
