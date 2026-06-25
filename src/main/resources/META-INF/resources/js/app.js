@@ -16,8 +16,8 @@ function calcularTotal() {
 
 function confirmBarber()
 {
-    const barber = document.querySelector('option[name="barbeiro"]:clicked');
+    const select = document.querySelector('select[name="barbeiro"]');
+    const barber = select.value
 
-    document.getElementById("total").innerText = barber;
     console.log(barber);
 }

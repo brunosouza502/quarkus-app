@@ -10,9 +10,9 @@
 <form action="">
 
     <label>Barbeiro:</label><br>
-    <select name="barbeiro">
+    <select name="barbeiro" onclick="confirmBarber()">
         {#for b in barbers}
-            <option name="barbeiro" value="{b.getNome()}" onclick="confirmBarber()">{b.getNome()}</option>
+            <option name="barbeiro" value="{b.getNome()}">{b.getNome()}</option>
         {/for}
     </select><br><br>
 
