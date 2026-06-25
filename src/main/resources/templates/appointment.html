@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agendamento Barbearia</title>
+</head>
+<body>
+
+<h2>Agendar Atendimento</h2>
+
+<form >
+
+    <label>Barbeiro:</label><br>
+    <input type="text" name="barbeiro"><br><br>
+
+    <label>Cliente:</label><br>
+    <input type="text" name="cliente"><br><br>
+
+    <label>Serviço:</label><br>
+    <select name="servico">
+        {#for s in services}
+            <option value="{s}">{s}</option>
+        {/for}
+    </select><br><br>
+
+    <label>Valor:</label><br>
+    <input type="number" name="valor"><br><br>
+
+    <button type="submit">Agendar</button>
+
+</form>
+
+</body>
+</html>

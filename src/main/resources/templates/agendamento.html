@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agendamento Barbearia</title>
+</head>
+<body>
+
+<h2>Agendar Atendimento</h2>
+
+<form action="">
+
+    <label>Barbeiro:</label><br>
+    <select name="barbeiro">
+        {#for b in barbers}
+            <option value="{b.getNome()}">{b.getNome()}</option>
+        {/for}
+    </select><br><br>
+
+    <label>Cliente:</label><br>
+    <input type="text" name="cliente"><br>
+
+    <label>Celular:</label><br>
+    <input type="text" name="celular"><br><br>
+
+    <label>Serviço:</label><br>
+
+    {#for s in services}
+        <input type="checkbox" 
+               name="servicos" 
+               value="{s.getCost()}"
+               onclick="calcularTotal()">
+           {s.getServiceName()}: <t> R${s.getCost()}
+        <br>
+    {/for}
+    
+    <br>
+
+    <strong>Total: R$ <span id="total">0.00</span></strong>
+
+    <br><br>
+
+    
+    <input type="hidden" name="total" id="totalInput">
+
+    <button type="submit">Agendar</button> 
+
+</form>
+
+<script src="/js/app.js"> </script>
+
+</body>
+</html>
