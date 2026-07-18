@@ -1,9 +1,12 @@
 package com.example;
 
+import java.time.LocalDateTime;
+
 public class ServiceType {
     private int id;
     private String serviceName;
     private Float cost;
+    private LocalDateTime serviceTime;
     
     public int getId() {
         return id;
@@ -22,5 +25,11 @@ public class ServiceType {
     }
     public void setCost(Float cost) {
         this.cost = cost;
+    }
+    public LocalDateTime getServiceTime() {
+        return serviceTime;
+    }
+    public void setServiceTime(LocalDateTime serviceTime) {
+        this.serviceTime = serviceTime;
     }
 }

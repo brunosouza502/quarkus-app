@@ -4,7 +4,10 @@ import io.agroal.api.AgroalDataSource;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
@@ -73,25 +76,26 @@ public class AgendamentoResource {
                           .data("services", service);
     }
 
-    //Calcular total dos serviços
-    /*
-    
+        //Calcular total dos serviços
         @POST
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         @Produces(MediaType.TEXT_PLAIN)
-        public String salvar(
+        public String Salvar(
 
                 @FormParam("barbeiro") String barbeiro,
                 @FormParam("cliente") String cliente,
                 @FormParam("celular") String celular,
-                @FormParam("total") double total ✅
+                @FormParam("total") float total
 
         ) {
 
+            System.out.println("Barbeiro: " + barbeiro);
+            System.out.println("Cliente: " + cliente);
+            System.out.println("Cel: " + celular);
             System.out.println("Total recebido: " + total);
 
             return "OK";
         }
 
-    */
+    
 }

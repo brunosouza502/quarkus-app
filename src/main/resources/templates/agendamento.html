@@ -7,7 +7,7 @@
 
 <h2>Agendar Atendimento</h2>
 
-<form action="">
+<form action="/agendamento" method="POST">
 
     <label>Barbeiro:</label><br>
     <select name="barbeiro" onchange="confirmBarber()">
@@ -28,11 +28,13 @@
     {#for s in services}
         <input type="checkbox" 
                name="servicos" 
-               value="{s.getCost()}"
+               value="{s.getId()}"
+               data-cost="{s.getCost()}"
                onclick="calcularTotal()">
-           {s.getServiceName()}: <t> R${s.getCost()}
+           {s.getServiceName()}:  R${s.getCost()}
         <br>
     {/for}
+    
     
     <br>
 
@@ -40,6 +42,12 @@
 
     <br><br>
 
+    <label>Data e Hora:</label><br>
+    <input type="datetime-local"
+        name="serviceTime"
+        required>
+
+    <br><br>
     
     <input type="hidden" name="total" id="totalInput">
 
